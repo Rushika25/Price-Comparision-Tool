@@ -1,0 +1,14 @@
+<input [(ngModel)]="productName" placeholder="Enter product name" />
+<button (click)="fetchProduct()">Fetch Product</button>
+<button (click)="addSampleProduct()">Add Sample Product</button>
+
+<div *ngIf="product">
+  <h2>{{ product.name }}</h2>
+  <p>Last Updated: {{ product.lastUpdated | date }}</p>
+  <ul>
+    <li *ngFor="let price of product.prices">
+      {{ price.store }} – ₹{{ price.amount }} –
+      <a [href]="price.url" target="_blank">Buy Now</a>
+    </li>
+  </ul>
+</div>
