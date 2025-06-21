@@ -1,2 +1,1 @@
-# Price-Comparision-Tool
-PriceComarision tool
+# PriceComparisiontool
